@@ -10,7 +10,7 @@ export default function About() {
             <img 
               src="/loom-about-living.webp"
               alt="A softly furnished interior with layered materials"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '1rem' }}
+              className={styles.aboutImage}
             />
           </ScrollReveal>
         </div>
