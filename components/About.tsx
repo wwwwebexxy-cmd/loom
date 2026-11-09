@@ -23,7 +23,7 @@ export default function About() {
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.3}>
             <p className={styles.paragraph}>
-              Loom and Grain brings together furniture, textiles, and finishing details to create rooms that feel considered, comfortable, and personal.
+              With 10 years of experience, Loom and Grain brings together furniture, textiles, and finishing details to create rooms that feel considered, comfortable, and personal.
             </p>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={0.4}>
