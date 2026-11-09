@@ -1,10 +1,10 @@
 .floatingBtn {
   position: fixed;
-  left: 2rem;
-  bottom: 2rem;
-  width: 3rem;
-  height: 3rem;
-  background-color: #25D366;
+  left: clamp(12px, 2vw, 28px);
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  width: 56px;
+  height: 56px;
+  background-color: var(--primary);
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -19,7 +19,7 @@
 }
 
 .floatingBtn:hover {
-  background-color: #128C7E;
+  background-color: var(--primary-hover);
   transform: scale(1.1);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
 }
@@ -29,12 +29,15 @@
   display: block;
 }
 
+.floatingBtn:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 4px;
+}
+
 @media (max-width: 768px) {
   .floatingBtn {
-    width: 45px;
-    height: 45px;
-    font-size: 24px;
-    left: 15px;
-    bottom: 15px;
+    width: 52px;
+    height: 52px;
+    font-size: 25px;
   }
 }

@@ -5,20 +5,14 @@ import styles from "./ServiceCarousel.module.css";
 import ScrollReveal from "./ScrollReveal";
 
 const allServices = [
-  { title: "Interior Design", image: "/interior_design.png" },
-  { title: "Fit-Out Custom Furniture", image: "/fitout_furniture.png" },
-  { title: "Joinery Upholstery", image: "/joinery_upholstery.png" },
-  { title: "Soft Furnishings Curtains", image: "/soft_furnishings.png" },
-  { title: "Blinds Shade Structures", image: "/blinds_shades.png" },
-  { title: "Car Parking Shades", image: "/shade_structures.png" },
-  { title: "Office Furniture & Workstations", image: "/office_furniture.png" },
-  { title: "Storage Solutions", image: "/our-service-one.jpg" },
-  { title: "Sofa & Chair Upholstery", image: "/our-service-three.jpg" },
-  { title: "Bedroom & Living room Recreation", image: "/our-service-two.jpg" },
-  { title: "Wallpaper & Wall decor", image: "/our-service-four.png" },
-  { title: "Paneling & Cladding", image: "/paneling_cladding.png" },
-  { title: "Hospital Furniture", image: "/hospital_furniture.png" },
-  { title: "Kitchen & Wardrobe", image: "/kitchen_wardrobe.png" },
+  { title: "Living Room Furnishings", image: "/loom-living-room.webp" },
+  { title: "Bedroom Comfort", image: "/loom-bedroom.webp" },
+  { title: "Upholstery & Textures", image: "/loom-upholstery.webp" },
+  { title: "Curtains & Soft Layers", image: "/loom-curtains.webp" },
+  { title: "Furniture for Workspaces", image: "/loom-workspace.webp" },
+  { title: "Wardrobes & Storage", image: "/loom-storage.webp" },
+  { title: "Wall Finishes & Details", image: "/loom-wall-finish.webp" },
+  { title: "Natural Materials", image: "/loom-natural-materials.webp" },
 ];
 
 export default function ServiceCarousel() {
@@ -30,7 +24,7 @@ export default function ServiceCarousel() {
         </ScrollReveal>
         <ScrollReveal direction="up" delay={0.2}>
           <p className="section-subtitle text-center mx-auto">
-            From bespoke interior design to custom fit-outs and shading solutions, we bring your vision to life.
+            Explore comfortable furniture, soft furnishings, and the considered details that make a space your own.
           </p>
         </ScrollReveal>
       </div>

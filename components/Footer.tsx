@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
-import { FaInstagram, FaFacebookF, FaSnapchatGhost, FaTiktok } from "react-icons/fa";
 import Image from "next/image";
+import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,53 +11,60 @@ export default function Footer() {
         <div className={styles.brand}>
           <div className={styles.logo}>
             <Image
-              src="/shapes-shades-logo.webp"
-              alt="Shapes & Shades Interior Studio"
-              width={1178}
-              height={683}
+              src="/loom-and-grain-mark.png"
+              alt="Loom and Grain Furnishing LLC"
+              width={2172}
+              height={724}
               className={styles.logoImage}
-              sizes="(max-width: 768px) 220px, 280px"
+              sizes="(max-width: 768px) 100vw, 300px"
             />
           </div>
           <p className={styles.description}>
-            Elevating your living spaces with bespoke interior design and premium aesthetics.
+            Furnishings, textures, and considered details chosen to make a space feel like your own.
           </p>
+          <a
+            className={styles.socialLink}
+            href="https://www.instagram.com/loomandgrain.furnishings?cplk=MmdsNGJpaDhlN3Q2&utm_source=qr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Loom and Grain on Instagram"
+          >
+            <FaInstagram aria-hidden="true" />
+            <span>Instagram</span>
+          </a>
         </div>
 
         <div className={styles.linksGroup}>
-          <h4 className={styles.columnTitle}>Company</h4>
+          <h4 className={styles.columnTitle}>Explore</h4>
+          <a href="#home" className={styles.link}>Home</a>
           <a href="#about" className={styles.link}>About</a>
           <a href="#services" className={styles.link}>Services</a>
-          <a href="#features" className={styles.link}>Portfolio</a>
         </div>
 
         <div className={styles.linksGroup}>
-          <h4 className={styles.columnTitle}>Legal</h4>
-          <a href="#" className={styles.link}>Privacy Policy</a>
-          <a href="#" className={styles.link}>Terms of Service</a>
+          <h4 className={styles.columnTitle}>The collection</h4>
+          <a href="#services" className={styles.link}>Living spaces</a>
+          <a href="#services" className={styles.link}>Soft furnishings</a>
+          <a href="#services" className={styles.link}>Finishing details</a>
         </div>
 
         <div className={styles.linksGroup}>
-          <h4 className={styles.columnTitle}>Social</h4>
-          <div className={styles.socialLinks}>
-            <a href="https://www.instagram.com/shapes_n_shades_interiors?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
-              <FaInstagram />
-            </a>
-            <a href="https://www.facebook.com/share/1CTPYv18Xd/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Facebook">
-              <FaFacebookF />
-            </a>
-            <a href="https://snapchat.com/t/2mm3iKk8" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Snapchat">
-              <FaSnapchatGhost />
-            </a>
-            <a href="https://www.tiktok.com/@shapes.and.shades0?_r=1&_t=ZS-99zeQzYO2j6" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="TikTok">
-              <FaTiktok />
-            </a>
-          </div>
+          <h4 className={styles.columnTitle}>Get in touch</h4>
+          <a href="tel:+971582206054" className={styles.link}>+971 582 206 054</a>
+          <a href="mailto:loomandgrain@gmail.com" className={styles.link}>loomandgrain@gmail.com</a>
+          <a
+            href="https://maps.app.goo.gl/VCuisYDPTpYTA2hD8?g_st=iwb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            Showroom location
+          </a>
         </div>
       </div>
 
       <div className={styles.bottomBar}>
-        <p>&copy; {currentYear} Shapes & Shades Interior Design. All rights reserved.</p>
+        <p>&copy; {currentYear} Loom and Grain Furnishing LLC. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -1,53 +1,102 @@
-"use client";
-
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaEnvelope, FaInstagram, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import styles from "./Contact.module.css";
 import ScrollReveal from "./ScrollReveal";
+
+const instagramUrl = "https://www.instagram.com/loomandgrain.furnishings?cplk=MmdsNGJpaDhlN3Q2&utm_source=qr";
+const mapsUrl = "https://maps.app.goo.gl/VCuisYDPTpYTA2hD8?g_st=iwb";
+const mapEmbedUrl = "https://maps.google.com/maps?q=Al%20Khayat%20Avenue%2C%20Warehouse%20No.%2017%2C%2017th%20St%2C%20Al%20Quoz%20Ind.%20First%2C%20Al%20Quoz%2C%20Dubai&output=embed";
 
 export default function Contact() {
   return (
     <section id="contact" className={styles.contactSection}>
       <div className={`container ${styles.container}`}>
-
-        {/* Left Column: Info Blocks */}
         <div className={styles.infoColumn}>
           <ScrollReveal direction="right" delay={0.1}>
-            <div className={styles.infoBlock}>
-              <span className={styles.icon}><FaPhoneAlt /></span>
-              <span className={styles.infoText}>+971 54 578 4247</span>
-            </div>
+            <h2 className={`section-title text-gradient ${styles.title}`}>
+              Let&apos;s talk about your space
+            </h2>
           </ScrollReveal>
           <ScrollReveal direction="right" delay={0.2}>
-            <div className={styles.infoBlock}>
-              <span className={styles.icon}><FaEnvelope /></span>
-              <span className={styles.infoText}>Sales@shapesandshades.ae</span>
-            </div>
+            <p className={styles.contactCopy}>
+              Speak with our operations team about furnishings, materials, and finishing details for your space.
+            </p>
           </ScrollReveal>
-          <ScrollReveal direction="right" delay={0.3}>
-            <div className={styles.infoBlock}>
-              <span className={styles.icon}><FaMapMarkerAlt /></span>
-              <span className={styles.infoText}>Industrial Area, Al Ain, Abu Dhabi – UAE</span>
+
+          <ScrollReveal direction="right" delay={0.3} className={styles.contactCard}>
+            <div className={styles.person}>
+              <h3 className={styles.personName}>Muhammed Arafath</h3>
+              <p className={styles.personRole}>Head of Operations</p>
             </div>
+
+            <div className={styles.contactDetails}>
+              <a className={styles.detailLink} href="tel:+971582206054">
+                <span className={styles.detailIcon}><FaPhoneAlt aria-hidden="true" /></span>
+                <span className={styles.detailText}>
+                  <span className={styles.detailLabel}>Phone</span>
+                  <span className={styles.detailValue}>+971 582 206 054</span>
+                </span>
+              </a>
+
+              <a className={styles.detailLink} href="mailto:loomandgrain@gmail.com">
+                <span className={styles.detailIcon}><FaEnvelope aria-hidden="true" /></span>
+                <span className={styles.detailText}>
+                  <span className={styles.detailLabel}>Email</span>
+                  <span className={styles.detailValue}>loomandgrain@gmail.com</span>
+                </span>
+              </a>
+
+              <a
+                className={`${styles.detailLink} ${styles.addressLink}`}
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className={styles.detailIcon}><FaMapMarkerAlt aria-hidden="true" /></span>
+                <span className={styles.detailText}>
+                  <span className={styles.detailLabel}>Address</span>
+                  <address className={styles.detailValue}>
+                    Al Khayat Avenue, Warehouse No. 17, 17th St,
+                    <br />Al Quoz Ind. First, Al Quoz, Dubai
+                  </address>
+                </span>
+              </a>
+            </div>
+
+            <a
+              className={styles.instagramLink}
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram aria-hidden="true" />
+              <span>Follow Loom and Grain on Instagram</span>
+            </a>
+          </ScrollReveal>
+
+          <ScrollReveal direction="right" delay={0.4}>
+            <a href="#services" className={styles.contactButton}>Explore furnishings</a>
           </ScrollReveal>
         </div>
 
-        {/* Right Column: Map */}
         <div className={styles.mapColumn}>
-          <ScrollReveal direction="left" delay={0.2} style={{ width: '100%', height: '100%' }}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.1519384709363!2d55.763479!3d24.1991651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8ab74523a05825%3A0x9c31e236f76e9e12!2sShapes%20and%20shades%20interior%20design%20llc%20spc!5e1!3m2!1sen!2sin!4v1790423411011!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              title="Google Maps"
-              className={styles.mapIframe}
-            ></iframe>
-          </ScrollReveal>
+          <iframe
+            className={styles.mapFrame}
+            src={mapEmbedUrl}
+            title="Map to Loom and Grain Furnishing LLC in Al Quoz, Dubai"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+          <a
+            className={styles.mapLink}
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaMapMarkerAlt aria-hidden="true" />
+            <span>Open exact location in Google Maps</span>
+          </a>
         </div>
-
       </div>
     </section>
   );

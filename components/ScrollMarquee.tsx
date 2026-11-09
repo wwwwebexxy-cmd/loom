@@ -46,8 +46,8 @@ const ScrollMarquee = () => {
           WebkitTextStroke: "2px var(--primary)",
         }}
       >
-        <span className="pr-8 md:pr-16 lg:pr-24 2xl:pr-32">SHAPING SPACES • SHADING LIVES • INTERIOR DESIGN • CUSTOM FURNITURE • JOINERY • </span>
-        <span className="pr-8 md:pr-16 lg:pr-24 2xl:pr-32">SHAPING SPACES • SHADING LIVES • INTERIOR DESIGN • CUSTOM FURNITURE • JOINERY • </span>
+        <span className="pr-8 md:pr-16 lg:pr-24 2xl:pr-32">LOOM AND GRAIN • FURNISHINGS • TEXTURE • MATERIALS • MADE FOR LIVING • </span>
+        <span className="pr-8 md:pr-16 lg:pr-24 2xl:pr-32">LOOM AND GRAIN • FURNISHINGS • TEXTURE • MATERIALS • MADE FOR LIVING • </span>
       </div>
     </div>
   );

@@ -9,8 +9,8 @@ export default function Hero() {
           <div className={styles.overlayContent}>
              <ScrollReveal direction="up" delay={0.2}>
                <h1 className={styles.title}>
-                <span style={{ color: 'white' }}>Shaping Spaces</span><br />
-                <span style={{ color: 'var(--primary)' }}>Shading Lives</span>
+                <span style={{ color: 'white' }}>Made for living</span><br />
+                <span style={{ color: 'var(--primary)' }}>Chosen with care</span>
               </h1>
              </ScrollReveal>
           </div>
@@ -19,13 +19,13 @@ export default function Hero() {
            <div className={styles.overlayContentRight}>
               <ScrollReveal direction="up" delay={0.4}>
                 <p className={styles.subtitle}>
-                  Shapes & Shades is a full-service interior design and fit-out studio in Al Ain, UAE — We Dealing with Office Furniture, custom furniture, joinery, Fit-out, upholstery, curtains and blinds, plus shade structures and car parking shades for residential and commercial spaces.
+                  Loom and Grain brings thoughtful furnishings, tactile materials, and refined details together to make every space feel like your own.
                 </p>
               </ScrollReveal>
               <ScrollReveal direction="up" delay={0.6}>
                 <div className={styles.ctaGroup}>
                   <a href="#contact" className={styles.primaryBtn}>Get Started</a>
-                  <a href="#features" className={styles.secondaryBtn}>Portfolio</a>
+                  <a href="#services" className={styles.secondaryBtn}>Explore furnishings</a>
                 </div>
               </ScrollReveal>
            </div>

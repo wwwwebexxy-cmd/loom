@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -7,86 +6,53 @@ import ScrollToTop from "../components/ScrollToTop";
 import Preloader from "../components/Preloader";
 import FloatingWhatsApp from "../components/FloatingWhatsApp";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
 
 export const metadata: Metadata = {
-  title: "Shapes & Shades Interior Design | Premium Aesthetics in Al Ain",
-  description: "Elevating your living spaces with bespoke interior design and premium aesthetics. Based in Al Ain, Abu Dhabi, UAE.",
+  title: "Loom and Grain Furnishing LLC | Made for living",
+  description: "Thoughtful furnishings, tactile materials, and considered details from Loom and Grain Furnishing LLC.",
+  applicationName: "Loom and Grain Furnishing LLC",
   icons: {
-    icon: "/favicon-matte-gold.webp",
-    shortcut: "/favicon-matte-gold.webp",
-    apple: "/favicon-matte-gold.webp",
+    icon: "/loom-and-grain-icon.svg",
+    shortcut: "/loom-and-grain-icon.svg",
+    apple: "/loom-and-grain-icon.svg",
   },
-  keywords: ["Interior Design", "Bespoke Interiors", "Shapes and Shades", "Al Ain Interior Design", "Abu Dhabi Interiors", "UAE", "Premium Aesthetics", "Home Decor", "Commercial Design", "Shapes and Shades LLC SPC"],
+  keywords: ["Loom and Grain", "Furnishing", "Furniture", "Soft Furnishings", "Textiles", "Home Furnishings"],
   openGraph: {
-    title: "Shapes & Shades Interior Design",
-    description: "Elevating your living spaces with bespoke interior design and premium aesthetics. Based in Al Ain.",
-    url: "https://shapesandshades.ae/",
-    siteName: "Shapes & Shades Interior Design",
-    images: [
-      {
-        url: "https://shapesandshades.ae/logo-shapes-shade.png",
-        width: 1200,
-        height: 630,
-        alt: "Shapes & Shades Interior Design Logo",
-      }
-    ],
-    locale: "en_AE",
+    title: "Loom and Grain Furnishing LLC",
+    description: "Thoughtful furnishings, tactile materials, and considered details.",
+    siteName: "Loom and Grain Furnishing LLC",
+    ...(siteUrl ? {
+      url: `${siteUrl}/`,
+      images: [{
+        url: `${siteUrl}/loom-and-grain-logo.svg`,
+        width: 800,
+        height: 230,
+        alt: "Loom and Grain Furnishing LLC logo",
+      }],
+    } : {}),
     type: "website",
   },
-  alternates: {
-    canonical: "https://shapesandshades.ae/",
-  },
-  other: {
-    "geo.region": "AE-AZ",
-    "geo.placename": "Al Ain",
-    "geo.position": "24.199165;55.763479",
-    "ICBM": "24.199165, 55.763479"
-  }
+  ...(siteUrl ? { alternates: { canonical: `${siteUrl}/` } } : {}),
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "InteriorDesignBusiness",
-  "name": "Shapes and Shades Interior Design LLC SPC",
-  "image": "https://shapesandshades.ae/logo-shapes-shade.png",
-  "@id": "https://shapesandshades.ae/",
-  "url": "https://shapesandshades.ae/",
-  "telephone": "+971545784247",
-  "email": "Sales@shapesandshades.ae",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Industrial Area",
-    "addressLocality": "Al Ain",
-    "addressRegion": "Abu Dhabi",
-    "addressCountry": "AE"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 24.1991651,
-    "longitude": 55.763479
-  },
-  "sameAs": [
-    "https://www.instagram.com/shapes_n_shades_interiors",
-    "https://www.facebook.com/share/1CTPYv18Xd/",
-    "https://snapchat.com/t/2mm3iKk8",
-    "https://www.tiktok.com/@shapes.and.shades0"
-  ]
+  "@type": "Organization",
+  "name": "Loom and Grain Furnishing LLC",
+  "description": "Thoughtful furnishings, tactile materials, and considered details.",
+  ...(siteUrl ? {
+    "@id": `${siteUrl}/#organization`,
+    "url": `${siteUrl}/`,
+    "logo": `${siteUrl}/loom-and-grain-logo.svg`,
+  } : {}),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className="h-full antialiased"
     >
       <head>
         <script

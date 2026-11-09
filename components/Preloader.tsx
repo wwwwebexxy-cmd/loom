@@ -50,10 +50,10 @@ const Preloader = () => {
       {/* Logo Container */}
       <div className={`preloader-content ${isAnimating ? "fade-out" : ""}`}>
         <Image
-          src="/shapes-shades-logo.webp"
-          alt="Shapes & Shades Interior Studio"
-          width={1178}
-          height={683}
+          src="/loom-and-grain-mark.png"
+          alt="Loom and Grain Furnishing LLC"
+          width={2172}
+          height={724}
           className="preloader-logo"
           sizes="(max-width: 768px) 240px, 340px"
           priority

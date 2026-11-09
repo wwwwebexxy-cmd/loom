@@ -19,13 +19,15 @@
 }
 
 .logo {
+  width: 300px;
+  max-width: 100%;
   margin-bottom: 1rem;
   line-height: 0;
 }
 
 .logoImage {
   display: block;
-  width: 260px;
+  width: 100%;
   max-width: 100%;
   height: auto;
   object-fit: contain;
@@ -35,6 +37,20 @@
   color: var(--text-muted);
   line-height: 1.6;
   max-width: 350px;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  margin-top: 0.75rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.socialLink svg {
+  font-size: 1.2rem;
 }
 
 .linksGroup {
@@ -54,11 +70,18 @@
 
 .link {
   color: var(--text-muted);
+  overflow-wrap: anywhere;
   transition: color 0.2s ease;
 }
 
 .link:hover {
   color: var(--primary);
+}
+
+.socialLink:focus-visible,
+.link:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
 }
 
 .bottomBar {
@@ -67,33 +90,6 @@
   text-align: center;
   color: var(--text-muted);
   font-size: 0.875rem;
-}
-
-.socialLinks {
-  display: flex;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-.socialIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.05);
-  color: var(--foreground);
-  font-size: 1.25rem;
-  transition: all 0.3s ease;
-}
-
-.socialIcon:hover {
-  background: var(--primary);
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-  /* matching potential primary color vibe */
 }
 
 @media (max-width: 768px) {
@@ -117,10 +113,6 @@
   .logo {
     display: flex;
     justify-content: center;
-  }
-
-  .logoImage {
-    width: 220px;
   }
 
   .description {

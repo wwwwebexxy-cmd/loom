@@ -1,12 +1,13 @@
 :root {
-  --background: #F4EFE6;
-  --foreground: #2A2522;
-  --primary: #A2825A;
-  --primary-glow: rgba(162, 130, 90, 0.3);
-  --secondary: #C4A983;
-  --card-bg: #FFFFFF;
-  --card-border: rgba(162, 130, 90, 0.2);
-  --text-muted: #6B625B;
+  --background: #fbfaf9;
+  --foreground: #171416;
+  --primary: #83152f;
+  --primary-hover: #6d1027;
+  --primary-glow: rgba(131, 21, 47, 0.22);
+  --secondary: #a52b46;
+  --card-bg: #ffffff;
+  --card-border: rgba(131, 21, 47, 0.16);
+  --text-muted: #655d60;
 }
 
 html {
@@ -41,13 +42,9 @@ button {
   font-family: inherit;
 }
 
-/* Gradient text utility */
+/* Brand accent text utility */
 .text-gradient {
-  background: linear-gradient(to right, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  color: var(--primary);
 }
 
 /* Common Section padding */

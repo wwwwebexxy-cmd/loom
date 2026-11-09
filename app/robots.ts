@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "");
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
@@ -20,6 +22,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       }
     ],
-    sitemap: "https://shapesandshades.ae/sitemap.xml",
+    ...(siteUrl ? { sitemap: `${siteUrl}/sitemap.xml` } : {}),
   };
 }

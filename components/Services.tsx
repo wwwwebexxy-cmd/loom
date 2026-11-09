@@ -3,28 +3,28 @@ import ScrollReveal from "./ScrollReveal";
 
 const services = [
   {
-    title: "Interior Design",
-    image: "/our-service-one.jpg"
+    title: "Living Room Furnishings",
+    image: "/loom-living-room.webp"
   },
   {
-    title: "Commercial & Residential Fit-Outs",
-    image: "/our-service-two.jpg"
+    title: "Furniture for Everyday Living",
+    image: "/loom-bedroom.webp"
   },
   {
-    title: "Custom Joinery & Upholstery",
-    image: "/our-service-three.jpg"
+    title: "Upholstery & Textures",
+    image: "/loom-upholstery.webp"
   },
   {
-    title: "Curtains, Blinds & Soft Furnishings",
-    image: "/our-service-four.png"
+    title: "Curtains & Soft Furnishings",
+    image: "/loom-curtains.webp"
   },
   {
-    title: "Shade Structures & Car Parking",
-    image: "/shade_structures.png"
+    title: "Natural Materials & Finishes",
+    image: "/loom-natural-materials.webp"
   },
   {
-    title: "Office Furniture & Workstations",
-    image: "/office_furniture.png"
+    title: "Furniture for Workspaces",
+    image: "/loom-workspace.webp"
   }
 ];
 
@@ -37,7 +37,7 @@ export default function Services() {
         </ScrollReveal>
         <ScrollReveal direction="up" delay={0.2}>
           <p className="section-subtitle">
-            LET'S WORK TOGETHER! We offer a complete suite of interior design, joinery, and outdoor shade solutions.
+            Discover furnishings, textures, and finishing touches for rooms that feel warm, balanced, and personal.
           </p>
         </ScrollReveal>
         <div className={styles.grid}>

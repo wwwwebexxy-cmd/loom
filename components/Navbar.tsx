@@ -13,15 +13,20 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         <div className={styles.logo}>
-          <Link href="/#home" onClick={closeMenu}>
+          <Link
+            href="/#home"
+            onClick={closeMenu}
+            className={styles.logoLink}
+            aria-label="Loom and Grain Furnishing LLC home"
+          >
             <Image
-              src="/shapes-shades-logo.webp"
-              alt="Shapes & Shades Interior Studio"
-              width={1178}
-              height={683}
+              src="/loom-and-grain-mark.png"
+              alt=""
+              width={2172}
+              height={724}
               priority
               className={styles.logoImage}
-              sizes="(max-width: 768px) 170px, 220px"
+              sizes="(max-width: 768px) 52vw, 220px"
             />
           </Link>
         </div>
