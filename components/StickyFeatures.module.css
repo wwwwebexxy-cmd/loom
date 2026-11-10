@@ -1,5 +1,5 @@
 .sectionContainer {
-  padding: 6rem 0;
+  padding: 6rem 0 2rem;
   background: var(--background);
   overflow: hidden;
 }
@@ -38,7 +38,7 @@
 .sliderContainer {
   width: 100%;
   overflow-x: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 0;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;
 }

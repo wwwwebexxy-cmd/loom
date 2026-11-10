@@ -1,3 +1,9 @@
+.section {
+  min-height: auto;
+  padding: 2rem 2rem;
+  justify-content: flex-start;
+}
+
 .logoGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

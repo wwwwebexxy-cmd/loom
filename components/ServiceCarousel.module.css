@@ -80,11 +80,11 @@
 }
 
 @media (hover: none) {
-  .overlay {
+  .card:active .overlay {
     opacity: 1;
   }
 
-  .cardTitle {
+  .card:active .cardTitle {
     transform: translateY(0);
   }
 }
