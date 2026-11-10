@@ -1,32 +1,6 @@
 import styles from "./Services.module.css";
 import ScrollReveal from "./ScrollReveal";
-
-const services = [
-  {
-    title: "Living Room Furnishings",
-    image: "/loom-living-room.webp"
-  },
-  {
-    title: "Furniture for Everyday Living",
-    image: "/loom-bedroom.webp"
-  },
-  {
-    title: "Upholstery & Textures",
-    image: "/loom-upholstery.webp"
-  },
-  {
-    title: "Curtains & Soft Furnishings",
-    image: "/loom-curtains.webp"
-  },
-  {
-    title: "Natural Materials & Finishes",
-    image: "/loom-natural-materials.webp"
-  },
-  {
-    title: "Furniture for Workspaces",
-    image: "/loom-workspace.webp"
-  }
-];
+import { services } from "./serviceData";
 
 export default function Services() {
   return (
@@ -37,12 +11,12 @@ export default function Services() {
         </ScrollReveal>
         <ScrollReveal direction="up" delay={0.2}>
           <p className="section-subtitle">
-            Discover furnishings, textures, and finishing touches for rooms that feel warm, balanced, and personal.
+            Curtains, blinds, upholstery, custom furniture, wall finishes, flooring, carpets, decorative stickers, and frosted glass film.
           </p>
         </ScrollReveal>
         <div className={styles.grid}>
           {services.map((service, index) => (
-            <ScrollReveal key={index} direction="up" delay={0.2 + (index * 0.1)}>
+            <ScrollReveal key={service.title} direction="up" delay={0.2 + (index * 0.1)}>
               <div className={styles.card}>
                 <img src={service.image} alt={service.title} className={styles.cardImage} />
                 <div className={styles.overlay}>

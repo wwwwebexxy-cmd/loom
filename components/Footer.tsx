@@ -42,10 +42,10 @@ export default function Footer() {
         </div>
 
         <div className={styles.linksGroup}>
-          <h4 className={styles.columnTitle}>The collection</h4>
-          <a href="#services" className={styles.link}>Living spaces</a>
-          <a href="#services" className={styles.link}>Soft furnishings</a>
-          <a href="#services" className={styles.link}>Finishing details</a>
+          <h4 className={styles.columnTitle}>Our services</h4>
+          <a href="#services" className={styles.link}>Curtains & blinds</a>
+          <a href="#services" className={styles.link}>Upholstery & custom furniture</a>
+          <a href="#services" className={styles.link}>Wall & floor finishes</a>
         </div>
 
         <div className={styles.linksGroup}>
