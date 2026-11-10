@@ -20,7 +20,7 @@ export default function Navbar() {
             aria-label="Loom and Grain Furnishing LLC home"
           >
             <Image
-              src="/loom-and-grain-mark.png"
+              src="/loom-and-grain-horizontal.png"
               alt=""
               width={2172}
               height={724}

@@ -50,7 +50,7 @@ const Preloader = () => {
       {/* Logo Container */}
       <div className={`preloader-content ${isAnimating ? "fade-out" : ""}`}>
         <Image
-          src="/loom-and-grain-mark.png"
+          src="/loom-and-grain-horizontal.png"
           alt="Loom and Grain Furnishing LLC"
           width={2172}
           height={724}

@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     ...(siteUrl ? {
       url: `${siteUrl}/`,
       images: [{
-        url: `${siteUrl}/loom-and-grain-logo.svg`,
-        width: 800,
-        height: 230,
+        url: `${siteUrl}/loom-and-grain-horizontal.png`,
+        width: 2172,
+        height: 724,
         alt: "Loom and Grain Furnishing LLC logo",
       }],
     } : {}),
@@ -44,7 +44,7 @@ const jsonLd = {
   ...(siteUrl ? {
     "@id": `${siteUrl}/#organization`,
     "url": `${siteUrl}/`,
-    "logo": `${siteUrl}/loom-and-grain-logo.svg`,
+    "logo": `${siteUrl}/loom-and-grain-horizontal.png`,
   } : {}),
 };
 

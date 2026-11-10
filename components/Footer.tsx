@@ -11,7 +11,7 @@ export default function Footer() {
         <div className={styles.brand}>
           <div className={styles.logo}>
             <Image
-              src="/loom-and-grain-mark.png"
+              src="/loom-and-grain-horizontal.png"
               alt="Loom and Grain Furnishing LLC"
               width={2172}
               height={724}

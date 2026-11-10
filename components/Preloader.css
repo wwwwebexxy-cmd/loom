@@ -63,7 +63,6 @@
   max-width: min(78vw, 340px);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 16px var(--primary-glow));
 }
 
 /* Fade out content before curtains open */
